@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medel Kaye Cabillion — IT Student Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bgCanvas"></canvas>
+<div class="glow-orb g1"></div>
+<div class="glow-orb g2"></div>
+<div class="glow-orb g3"></div>
+<div class="scanlines"></div>
+<div class="vignette"></div>
+
+<header>
+  <nav class="wrap">
+    <div class="logo">MKC<span class="blink">_</span></div>
+    <ul class="navlinks">
+      <li><a href="#about">about</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#timeline">timeline</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+    <a class="btn-resume" href="#" id="resumeBtn" title="Add a link to your resume PDF here">Download resume</a>
+    <button class="navtoggle" id="navToggle" aria-label="Toggle menu">☰</button>
+  </nav>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <div class="termwin">
+      <div class="termbar">
+        <span class="termdot r"></span><span class="termdot y"></span><span class="termdot g"></span>
+        <span class="termtitle">~/intern-applicant — zsh</span>
+      </div>
+      <div class="termbody">
+        <div class="termline"><span class="prompt">$</span><span class="cmd">whoami</span></div>
+        <div class="out name-out">Medel Kaye Cabillion</div>
+        <div class="termline"><span class="prompt">$</span><span class="cmd">cat role.txt</span></div>
+        <div class="out"><b>BS Information Technology student · Aspiring Web/Software Developer Intern.</b><br>I build full-stack web apps for coursework, community organizations, and a capstone project.</div>
+        <div class="hero-actions">
+          <a href="#projects" class="btn primary">View projects</a>
+          <a href="#contact" class="btn">Get in touch</a>
+        </div>
+        <div class="termline"><span class="prompt">$</span><span class="cmd">cat contact.txt</span><span class="cursor-final"></span></div>
+        <div class="contact-out">
+          <span>medelcabillion@gmail.com</span>
+          <span>+63 994 761 2893</span>
+          <span>github.com/Medel2005</span>
+          <span>Davao City, Philippines</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section id="about">
+    <div class="sec-head"><h2>about</h2><span class="tag">01</span></div>
+    <div class="about-grid">
+      <p>IT student building full-stack web applications for coursework, community organizations, and a capstone project. Comfortable across the stack — from styling interfaces to wiring up databases and APIs — and looking for an internship where I can contribute to real production code and keep learning.</p>
+      <p>I like projects that solve a concrete, local problem: a coffee shop that needs a proper point-of-sale, a farmer who needs a fast answer on crop health, a task list that actually syncs across devices. Front end is where I'm strongest, but I'm just as comfortable wiring up the backend that makes it work.</p>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section id="skills">
+    <div class="sec-head"><h2>tech stack</h2><span class="tag">02</span></div>
+    <div class="skills-grid">
+      <div class="skill-block">
+        <h3>frontend</h3>
+        <ul><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>React Native (Vite)</li></ul>
+      </div>
+      <div class="skill-block">
+        <h3>backend</h3>
+        <ul><li>Node.js</li><li>Supabase</li><li>REST APIs</li></ul>
+      </div>
+      <div class="skill-block">
+        <h3>languages</h3>
+        <ul><li>Java</li><li>C++</li><li>C#</li><li>SQL</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section id="projects">
+    <div class="sec-head"><h2>featured projects</h2><span class="tag">03</span></div>
+    <div class="proj-grid">
+
+      <div class="proj-card" data-project="taskflow">
+        <div class="proj-top"><span class="termdot r"></span><span class="termdot y"></span><span class="termdot g"></span><span class="proj-tag-line">HCI course</span></div>
+        <div class="proj-body">
+          <h3>TaskFlow</h3>
+          <p>Task management web app with cross-device sync, live admin monitoring via Supabase Realtime, and per-account task scoping.</p>
+          <div class="proj-stack"><span>Supabase</span><span>JavaScript</span><span>HTML/CSS</span></div>
+        </div>
+      </div>
+
+      <div class="proj-card" data-project="pos">
+        <div class="proj-top"><span class="termdot r"></span><span class="termdot y"></span><span class="termdot g"></span><span class="proj-tag-line">POS system</span></div>
+        <div class="proj-body">
+          <h3>Thirteen: Eight POS</h3>
+          <p>Coffee shop POS with cash/QR payment toggle, VAT computation, inventory tracking, and receipt printing, deployed via Vercel.</p>
+          <div class="proj-stack"><span>Node.js</span><span>JavaScript</span></div>
+        </div>
+      </div>
+
+      <div class="proj-card" data-project="agripulse">
+        <div class="proj-top"><span class="termdot r"></span><span class="termdot y"></span><span class="termdot g"></span><span class="proj-tag-line">capstone</span></div>
+        <div class="proj-body">
+          <h3>AgriPulse</h3>
+          <p>Hybrid IoT + computer vision system combining soil sensors and leaf-image disease classification (MobileNetV2) to support smallholder rice farmers.</p>
+          <div class="proj-stack"><span>Supabase</span><span>Python</span><span>HTML/CSS</span></div>
+        </div>
+      </div>
+
+      <div class="proj-card" data-project="fgc">
+        <div class="proj-top"><span class="termdot r"></span><span class="termdot y"></span><span class="termdot g"></span><span class="proj-tag-line">matchmaking</span></div>
+        <div class="proj-body">
+          <h3>FGC Athlete Ledger</h3>
+          <p>A pickleball match-up tool that pairs players and settles who owes what in the same step, so match-making and the money side never fall out of sync.</p>
+          <div class="proj-stack"><span>HTML/CSS</span><span>JavaScript</span><span>Supabase</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section id="timeline">
+    <div class="sec-head"><h2>education &amp; experience</h2><span class="tag">04</span></div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">2023 — Present</div>
+        <h3>BS Information Technology</h3>
+        <p>Your University · Davao Region, Philippines</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2026</div>
+        <h3>Capstone Project — AgriPulse</h3>
+        <p>Lead developer, AIoT + ML rice monitoring system</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section id="contact">
+    <div class="contact-panel">
+      <div>
+        <h2>let's talk.</h2>
+        <p class="sub">Open to internship opportunities in web or software development. Reach out through any of the channels below.</p>
+      </div>
+      <div class="contact-list">
+        <a class="contact-item" href="mailto:medelcabillion@gmail.com"><span>medelcabillion@gmail.com</span><span class="k">email</span></a>
+        <a class="contact-item" href="tel:+639947612893"><span>+63 994 761 2893</span><span class="k">phone</span></a>
+        <a class="contact-item" href="https://github.com/Medel2005" target="_blank" rel="noopener"><span>github.com/Medel2005</span><span class="k">github</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 <b>Medel Kaye Cabillion</b></span>
+    <span>Built with HTML, CSS &amp; JavaScript</span>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modalContent"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
